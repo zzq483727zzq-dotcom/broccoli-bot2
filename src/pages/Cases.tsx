@@ -6,7 +6,7 @@ export default function Cases() {
     {
       title: "山东寿光大型西兰花基地",
       desc: "针对 60-80cm 标准化行距设计的除草方案，替代传统人工，效率提升 500%，每亩节省成本 300 元以上。",
-      image: "https://images.unsplash.com/photo-1583663848850-46af132dc08e?auto=format&fit=crop&q=80",
+      image: "/冷光暖光.png",
       stats: ["500%", "效率提升", "¥300+", "亩均降本"],
       icon: <TrendingUp className="w-5 h-5" />
     },
