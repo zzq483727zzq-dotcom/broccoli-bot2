@@ -44,63 +44,63 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* Feature 1 */}
-            <motion.div 
+            <motion.div
               whileHover={{ scale: 0.98 }}
-              className="bg-[#111] rounded-2xl p-8 md:p-12 relative overflow-hidden group h-[400px] flex flex-col justify-between"
+              className="rounded-2xl relative overflow-hidden group h-[400px]"
             >
-              <div className="relative z-10">
+              <img
+                src="/机器人3.jpg"
+                alt="高能激光作业系统"
+                className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-8 z-10">
                 <Zap className="w-8 h-8 text-agri-yellow mb-4" />
-                <h3 className="text-2xl font-bold mb-2">高能激光作业系统</h3>
-                <p className="text-gray-400 max-w-sm">
+                <h3 className="text-2xl font-bold mb-2 text-white">高能激光作业系统</h3>
+                <p className="text-gray-300 max-w-sm">
                   集成于底盘中部，可升降结构（30-50mm），内置多组激光模组，毫米级精准除草。
                 </p>
               </div>
-              <img 
-                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80" 
-                alt="Laser Tech" 
-                className="absolute right-0 bottom-0 w-2/3 h-2/3 object-cover opacity-50 group-hover:opacity-70 transition-opacity mask-image-gradient"
-              />
             </motion.div>
 
             {/* Feature 2 */}
-            <motion.div 
+            <motion.div
               whileHover={{ scale: 0.98 }}
-              className="bg-[#111] rounded-2xl p-8 md:p-12 relative overflow-hidden group h-[400px] flex flex-col justify-between"
+              className="rounded-2xl relative overflow-hidden group h-[400px]"
             >
-              <div className="relative z-10">
-                <Target className="w-8 h-8 text-yellow-500 mb-4" />
-                <h3 className="text-2xl font-bold mb-2">全地形底盘适配</h3>
-                <p className="text-gray-400 max-w-sm">
+              <img
+                src="/标准化垄作适配.png"
+                alt="全地形底盘适配"
+                className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-8 z-10">
+                <Target className="w-8 h-8 text-agri-yellow mb-4" />
+                <h3 className="text-2xl font-bold mb-2 text-white">全地形底盘适配</h3>
+                <p className="text-gray-300 max-w-sm">
                   四轮独立悬挂，配备宽度可调橡胶履带（50-70cm），完美适配西兰花垄间作业。
                 </p>
               </div>
-              <img 
-                src="https://images.unsplash.com/photo-1583663848850-46af132dc08e?auto=format&fit=crop&q=80" 
-                alt="Broccoli AI" 
-                className="absolute right-0 bottom-0 w-2/3 h-2/3 object-cover opacity-50 group-hover:opacity-70 transition-opacity mask-image-gradient"
-              />
             </motion.div>
 
             {/* Feature 3 - Full width */}
-            <motion.div 
+            <motion.div
               whileHover={{ scale: 0.99 }}
-              className="md:col-span-2 bg-[#111] rounded-2xl p-8 md:p-12 relative overflow-hidden group h-[400px] flex flex-col justify-center items-center text-center"
+              className="md:col-span-2 rounded-2xl relative overflow-hidden group h-[450px]"
             >
-              <div className="absolute inset-0 z-0">
-                <img 
-                  src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&q=80" 
-                  alt="All Terrain" 
-                  className="w-full h-full object-cover opacity-30 group-hover:opacity-40 transition-opacity"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#111] via-transparent to-[#111]"></div>
-              </div>
-              <div className="relative z-10">
-                <ShieldCheck className="w-12 h-12 text-white mx-auto mb-6" />
-                <h3 className="text-3xl md:text-4xl font-bold mb-4">可视化状态反馈</h3>
-                <p className="text-gray-300 max-w-2xl mx-auto text-lg">
+              <img
+                src="/冷光暖光.png"
+                alt="可视化状态反馈"
+                className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-10 z-10 text-center">
+                <ShieldCheck className="w-12 h-12 text-white mx-auto mb-4" />
+                <h3 className="text-3xl md:text-4xl font-bold mb-4 text-white">可视化状态反馈</h3>
+                <p className="text-gray-200 max-w-2xl mx-auto text-lg">
                   基于作物生长周期的灯光信号系统：苗期蓝色冷光，花期橙色暖光警示，作业状态一目了然。
                 </p>
-                <Link to="/introduction" className="inline-flex items-center gap-2 mt-8 text-agri-yellow hover:text-yellow-400 transition-colors">
+                <Link to="/introduction" className="inline-flex items-center gap-2 mt-6 text-agri-yellow hover:text-yellow-400 transition-colors">
                   探索设计细节 <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
