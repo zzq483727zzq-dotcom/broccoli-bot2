@@ -20,7 +20,7 @@ export default function Cases() {
     {
       title: "江苏盐城有机生态农庄",
       desc: "纯物理激光除草技术，零化学农药残留，完美符合有机蔬菜认证标准，保护土壤微生态。",
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80",
+      image: "/机器人2.png",
       stats: ["0", "农药残留", "100%", "有机达标"],
       icon: <Leaf className="w-5 h-5" />
     }
