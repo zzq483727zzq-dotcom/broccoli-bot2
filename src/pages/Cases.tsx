@@ -13,7 +13,7 @@ export default function Cases() {
     {
       title: "浙江台州丘陵梯田农场",
       desc: "全地形履带底盘完美适应 30° 复杂坡地，解决机械化设备难以进入的痛点，实现全区域覆盖。",
-      image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&q=80",
+      image: "/机器人3.jpg",
       stats: ["30°", "最大爬坡", "100%", "地形适应"],
       icon: <MapPin className="w-5 h-5" />
     },
