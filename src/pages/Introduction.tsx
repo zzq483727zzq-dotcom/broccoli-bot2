@@ -43,7 +43,7 @@ export default function Introduction() {
             <div className="relative group">
               <div className="relative h-[600px] rounded-3xl overflow-hidden bg-[#111] border border-white/5 shadow-2xl">
                 <img
-                  src="/设计细节.png"
+                  src="/替换1.png"
                   alt="设计细节"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
@@ -184,7 +184,7 @@ export default function Introduction() {
           >
             <div className="relative h-[700px] rounded-3xl overflow-hidden bg-[#111] border border-white/5 shadow-[0_0_60px_rgba(247,181,0,0.1)]">
               <img
-                src="/产品爆炸图.png"
+                src="/替换5.png"
                 alt="产品爆炸图"
                 className="w-full h-full object-contain p-8 group-hover:scale-102 transition-transform duration-500"
               />
