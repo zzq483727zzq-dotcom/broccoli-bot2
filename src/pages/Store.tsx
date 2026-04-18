@@ -56,7 +56,7 @@ export default function Store() {
             <div className="text-4xl font-bold mb-8 text-agri-yellow">¥ 89,999</div>
             <div className="relative h-48 mb-8 rounded-2xl overflow-hidden bg-zinc-800">
               <img
-                src="/hero-bg.png"
+                src="/机器人3.jpg"
                 alt="Pro"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
@@ -83,7 +83,7 @@ export default function Store() {
             <div className="text-4xl font-bold mb-8 text-agri-yellow">定制报价</div>
             <div className="relative h-48 mb-8 rounded-2xl overflow-hidden bg-zinc-800">
               <img 
-                src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&q=80" 
+                src="/冷光暖光.png"
                 alt="Enterprise" 
                 className="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-500"
               />
