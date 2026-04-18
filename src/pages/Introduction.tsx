@@ -267,7 +267,7 @@ export default function Introduction() {
           </div>
           <div className="relative h-[500px] bg-[#111] rounded-3xl overflow-hidden">
             <img
-              src="/标准化垄作适配.png"
+              src="/替换3.png"
               alt="标准化垄作适配"
               className="w-full h-full object-cover opacity-60 mix-blend-luminosity"
             />
@@ -282,7 +282,7 @@ export default function Introduction() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1 relative h-[500px] bg-[#111] rounded-3xl overflow-hidden">
               <img
-                src="/功能与形态.png"
+                src="/替换6.png"
                 alt="激光作业系统"
                 className="w-full h-full object-cover opacity-60"
               />
