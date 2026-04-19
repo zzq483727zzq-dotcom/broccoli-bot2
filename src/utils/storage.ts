@@ -7,6 +7,7 @@ export const STORAGE_KEYS = {
   ADMIN_PASSWORD: 'adminPassword',
   PRODUCTS: 'products',
   INQUIRIES: 'inquiries',
+  SITE_SETTINGS: 'siteSettings',
 } as const;
 
 // 默认管理员账号
@@ -118,6 +119,53 @@ export const updateInquiry = (id: string, updates: Partial<Inquiry>): void => {
 export const deleteInquiry = (id: string): void => {
   const inquiries = getInquiries().filter(i => i.id !== id);
   localStorage.setItem(STORAGE_KEYS.INQUIRIES, JSON.stringify(inquiries));
+};
+
+// 网站配置数据类型
+export interface SiteSettings {
+  phone: string;
+  phoneNote: string;
+  wechat: string;
+  wechatNote: string;
+  email: string;
+  emailNote: string;
+  address: string;
+  addressDetail: string;
+  serviceHoursWeekday: string;
+  serviceHoursWeekend: string;
+  serviceNote: string;
+  salesRep: string;
+  salesRepTitle: string;
+  salesRepBio: string;
+}
+
+// 默认网站配置
+export const DEFAULT_SITE_SETTINGS: SiteSettings = {
+  phone: '400-888-9527',
+  phoneNote: '工作日 9:00-18:00',
+  wechat: 'agri_tech_service',
+  wechatNote: '扫码添加专属顾问',
+  email: 'sales@broccoli-bot.com',
+  emailNote: '24小时内回复',
+  address: '北京市海淀区中关村科技园区',
+  addressDetail: '智慧农业产业基地 A座 5层',
+  serviceHoursWeekday: '周一至周六：9:00 - 20:00',
+  serviceHoursWeekend: '周日：10:00 - 18:00',
+  serviceNote: '节假日正常值班',
+  salesRep: '张经理',
+  salesRepTitle: '农业智能化解决方案专家',
+  salesRepBio: '从业12年，服务超过500家农场',
+};
+
+// 网站配置
+export const getSiteSettings = (): SiteSettings => {
+  const data = localStorage.getItem(STORAGE_KEYS.SITE_SETTINGS);
+  return data ? { ...DEFAULT_SITE_SETTINGS, ...JSON.parse(data) } : DEFAULT_SITE_SETTINGS;
+};
+
+export const setSiteSettings = (settings: Partial<SiteSettings>): void => {
+  const current = getSiteSettings();
+  localStorage.setItem(STORAGE_KEYS.SITE_SETTINGS, JSON.stringify({ ...current, ...settings }));
 };
 
 // 初始化商品数据

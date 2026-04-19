@@ -40,7 +40,7 @@ export default function Inquiries() {
       '500-1000': '500-1000亩',
       '>1000': '1000亩以上',
     };
-    return map[value] || value || '-';
+    return map[value] || (value ? value : '-');
   };
 
   return (

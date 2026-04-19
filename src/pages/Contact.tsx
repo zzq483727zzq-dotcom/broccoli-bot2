@@ -1,9 +1,10 @@
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Clock, MessageCircle, Send } from 'lucide-react';
 import { useState } from 'react';
-import { addInquiry } from '../utils/storage';
+import { addInquiry, getSiteSettings } from '../utils/storage';
 
 export default function Contact() {
+  const settings = getSiteSettings();
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -60,8 +61,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1">咨询热线</h4>
-                  <p className="text-gray-400">400-888-9527</p>
-                  <p className="text-sm text-gray-500 mt-1">工作日 9:00-18:00</p>
+                  <p className="text-gray-400">{settings.phone}</p>
+                  <p className="text-sm text-gray-500 mt-1">{settings.phoneNote}</p>
                 </div>
               </div>
 
@@ -71,8 +72,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1">商务微信</h4>
-                  <p className="text-gray-400">agri_tech_service</p>
-                  <p className="text-sm text-gray-500 mt-1">扫码添加专属顾问</p>
+                  <p className="text-gray-400">{settings.wechat}</p>
+                  <p className="text-sm text-gray-500 mt-1">{settings.wechatNote}</p>
                 </div>
               </div>
 
@@ -82,8 +83,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1">电子邮箱</h4>
-                  <p className="text-gray-400">sales@broccoli-bot.com</p>
-                  <p className="text-sm text-gray-500 mt-1">24小时内回复</p>
+                  <p className="text-gray-400">{settings.email}</p>
+                  <p className="text-sm text-gray-500 mt-1">{settings.emailNote}</p>
                 </div>
               </div>
 
@@ -93,8 +94,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1">公司地址</h4>
-                  <p className="text-gray-400">北京市海淀区中关村科技园区</p>
-                  <p className="text-sm text-gray-500 mt-1">智慧农业产业基地 A座 5层</p>
+                  <p className="text-gray-400">{settings.address}</p>
+                  <p className="text-sm text-gray-500 mt-1">{settings.addressDetail}</p>
                 </div>
               </div>
 
@@ -104,9 +105,9 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1">服务时间</h4>
-                  <p className="text-gray-400">周一至周六：9:00 - 20:00</p>
-                  <p className="text-gray-400">周日：10:00 - 18:00</p>
-                  <p className="text-sm text-agri-yellow mt-1">节假日正常值班</p>
+                  <p className="text-gray-400">{settings.serviceHoursWeekday}</p>
+                  <p className="text-gray-400">{settings.serviceHoursWeekend}</p>
+                  <p className="text-sm text-agri-yellow mt-1">{settings.serviceNote}</p>
                 </div>
               </div>
             </div>
@@ -119,9 +120,9 @@ export default function Contact() {
                   👨‍💼
                 </div>
                 <div>
-                  <p className="font-medium">张经理</p>
-                  <p className="text-sm text-gray-400">农业智能化解决方案专家</p>
-                  <p className="text-sm text-agri-yellow">从业12年，服务超过500家农场</p>
+                  <p className="font-medium">{settings.salesRep}</p>
+                  <p className="text-sm text-gray-400">{settings.salesRepTitle}</p>
+                  <p className="text-sm text-agri-yellow">{settings.salesRepBio}</p>
                 </div>
               </div>
             </div>
@@ -244,8 +245,8 @@ export default function Contact() {
             <div className="bg-gradient-to-br from-zinc-800 to-zinc-900 h-80 flex items-center justify-center">
               <div className="text-center">
                 <MapPin className="w-16 h-16 text-agri-yellow mx-auto mb-4" />
-                <p className="text-xl font-semibold">北京市海淀区中关村科技园区</p>
-                <p className="text-gray-400 mt-2">智慧农业产业基地 A座 5层</p>
+                <p className="text-xl font-semibold">{settings.address}</p>
+                <p className="text-gray-400 mt-2">{settings.addressDetail}</p>
                 <p className="text-sm text-gray-500 mt-4">地铁4号线中关村站A口出，步行800米</p>
               </div>
             </div>

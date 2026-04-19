@@ -24,6 +24,7 @@ import { initializeProducts } from './utils/storage';
 export default function App() {
   useEffect(() => {
     initializeProducts();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
