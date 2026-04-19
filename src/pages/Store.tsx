@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Check, ShoppingCart, Zap, Shield, Cpu } from 'lucide-react';
 
@@ -39,9 +40,11 @@ export default function Store() {
               <li className="flex items-center gap-3 text-sm text-gray-300"><Check className="w-5 h-5 text-agri-yellow" /> 标准视觉识别系统</li>
               <li className="flex items-center gap-3 text-sm text-gray-300"><Check className="w-5 h-5 text-agri-yellow" /> 4小时续航 (ASA 材质外壳)</li>
             </ul>
-            <button className="w-full bg-white text-black py-4 rounded-full font-bold hover:bg-agri-yellow transition-colors flex items-center justify-center gap-2">
-              <ShoppingCart className="w-5 h-5" /> 立即预订
-            </button>
+            <Link to="/contact">
+              <button className="w-full bg-white text-black py-4 rounded-full font-bold hover:bg-agri-yellow transition-colors flex items-center justify-center gap-2">
+                <ShoppingCart className="w-5 h-5" /> 立即预订
+              </button>
+            </Link>
           </div>
 
           {/* Pro Model */}
@@ -69,9 +72,11 @@ export default function Store() {
               <li className="flex items-center gap-3 text-sm text-gray-200"><Zap className="w-5 h-5 text-agri-yellow" /> 8小时长续航 (ASA+碳纤维)</li>
               <li className="flex items-center gap-3 text-sm text-gray-200"><Zap className="w-5 h-5 text-agri-yellow" /> RTK 厘米级定位基站</li>
             </ul>
-            <button className="w-full bg-agri-yellow text-black py-4 rounded-full font-bold hover:bg-white transition-colors flex items-center justify-center gap-2">
-              <ShoppingCart className="w-5 h-5" /> 立即预订
-            </button>
+            <Link to="/contact">
+              <button className="w-full bg-agri-yellow text-black py-4 rounded-full font-bold hover:bg-white transition-colors flex items-center justify-center gap-2">
+                <ShoppingCart className="w-5 h-5" /> 立即预订
+              </button>
+            </Link>
           </div>
 
           {/* Enterprise Model */}
@@ -95,9 +100,11 @@ export default function Store() {
               <li className="flex items-center gap-3 text-sm text-gray-300"><Shield className="w-5 h-5 text-agri-yellow" /> 自动充电/散热维护舱</li>
               <li className="flex items-center gap-3 text-sm text-gray-300"><Shield className="w-5 h-5 text-agri-yellow" /> 3年企业级维保服务</li>
             </ul>
-            <button className="w-full bg-transparent border border-white/30 text-white py-4 rounded-full font-bold hover:bg-white/10 transition-colors flex items-center justify-center gap-2">
-              <Cpu className="w-5 h-5" /> 联系销售
-            </button>
+            <Link to="/contact">
+              <button className="w-full bg-transparent border border-white/30 text-white py-4 rounded-full font-bold hover:bg-white/10 transition-colors flex items-center justify-center gap-2">
+                <Cpu className="w-5 h-5" /> 联系销售
+              </button>
+            </Link>
           </div>
         </div>
       </div>

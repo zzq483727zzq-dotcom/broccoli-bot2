@@ -23,6 +23,7 @@ export default function Navbar() {
     { name: '应用案例', path: '/cases' },
     { name: '研究调研', path: '/research' },
     { name: '购买渠道', path: '/store' },
+    { name: '联系我们', path: '/contact' },
   ];
 
   return (
@@ -109,13 +110,15 @@ export default function Navbar() {
             </motion.button>
 
             {/* User Icon */}
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              className="p-2.5 rounded-full hover:bg-white/10 group cursor-pointer"
-            >
-              <User className="w-5 h-5 group-hover:text-agri-yellow transition-colors duration-200" />
-            </motion.button>
+            <Link to="/login">
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                className="p-2.5 rounded-full hover:bg-white/10 group cursor-pointer"
+              >
+                <User className="w-5 h-5 group-hover:text-agri-yellow transition-colors duration-200" />
+              </motion.button>
+            </Link>
 
             {/* Cart Button */}
             <Link to="/store">
