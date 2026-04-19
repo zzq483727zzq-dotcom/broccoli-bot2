@@ -4,6 +4,7 @@
  */
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -18,8 +19,13 @@ import Dashboard from './pages/admin/Dashboard';
 import Products from './pages/admin/Products';
 import Inquiries from './pages/admin/Inquiries';
 import Profile from './pages/admin/Profile';
+import { initializeProducts } from './utils/storage';
 
 export default function App() {
+  useEffect(() => {
+    initializeProducts();
+  }, []);
+
   return (
     <Router>
       <div className="min-h-screen bg-black text-white font-sans flex flex-col">
