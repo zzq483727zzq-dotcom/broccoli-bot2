@@ -146,12 +146,6 @@ export default function Login() {
               )}
             </button>
           </form>
-
-          {/* Default Credentials Hint */}
-          <div className="mt-6 p-4 bg-agri-yellow/10 rounded-xl border border-agri-yellow/20">
-            <p className="text-sm text-gray-400 mb-2">默认管理员账号：</p>
-            <p className="text-sm font-mono text-agri-yellow">admin / admin123</p>
-          </div>
         </motion.div>
 
         {/* Back to Home */}
